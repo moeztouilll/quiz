@@ -41,12 +41,35 @@ const elFilterButtons = document.querySelectorAll('.filter-btn');
 // Initialize app
 async function init() {
   try {
-    // Load local storage if exists
-    loadState();
+    // Try to load session data
+    const sessionData = sessionStorage.getItem('ccna_quiz_session');
     
-    // Fetch questions
-    const response = await fetch('questions.json');
-    questions = await response.json();
+    if (sessionData) {
+      const data = JSON.parse(sessionData);
+      questions = data.questions;
+      scores = data.scores;
+      currentIndex = data.currentIndex;
+    } else {
+      // Fresh start: Fetch questions
+      const response = await fetch('questions.json');
+      if (!response.ok) throw new Error("Failed to load questions.json");
+      let loadedQuestions = await response.json();
+      
+      // Shuffle questions
+      shuffleArray(loadedQuestions);
+      
+      // Setup questions and shuffle choices
+      loadedQuestions.forEach((q, i) => {
+        q.original_num = q.num;
+        q.num = i + 1; // renumber 1 to N
+        if (q.choices && q.choices.length > 0) {
+          shuffleArray(q.choices);
+        }
+      });
+      
+      questions = loadedQuestions;
+      saveState();
+    }
     
     // Render sidebar grid
     renderGrid();
@@ -72,7 +95,15 @@ async function init() {
 
   } catch (error) {
     console.error("Error starting app:", error);
-    elQuestionText.textContent = "Erreur lors du chargement des questions. Veuillez vérifier le serveur.";
+    elQuestionText.textContent = "Erreur : Impossible de charger questions.json. Avez-vous bien uploadé ce fichier sur votre serveur ?";
+  }
+}
+
+// Utility to shuffle an array (Fisher-Yates)
+function shuffleArray(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
   }
 }
 
@@ -122,10 +153,15 @@ function loadQuestion(index) {
   if (isMatching) {
     elQuestionTypeBadge.textContent = "Mise en Relation";
     renderMatchingQuestion(q);
-  } else {
+  } else if (q.choices && q.choices.length > 0) {
     const correctCount = q.choices.filter(c => c.is_correct).length;
     elQuestionTypeBadge.textContent = correctCount > 1 ? `Choix Multiples (${correctCount})` : "Choix Unique";
     renderChoiceQuestion(q, correctCount > 1);
+  } else {
+    // No interactive choices available
+    elQuestionTypeBadge.textContent = "Information / Image";
+    elAnswersContainer.innerHTML = '<div class="choice-item" style="justify-content:center; cursor:default; pointer-events:none;"><span class="choice-text" style="color:var(--text-muted); font-style:italic;">Les réponses interactives ne sont pas disponibles pour cette question (elles figurent probablement dans l\'image). Cliquez sur Valider pour continuer.</span></div>';
+    elBtnSubmit.disabled = false;
   }
   
   // If the user already completed this question, reveal correct answers directly
@@ -305,9 +341,10 @@ async function revealAnswers(q, isCorrect) {
         select.classList.add('incorrect-match');
       }
     });
-  } else {
+  } else if (q.choices && q.choices.length > 0) {
     document.querySelectorAll('.choice-item').forEach(item => {
       const idx = parseInt(item.dataset.index);
+      if (isNaN(idx)) return; // skip the fallback message div
       const isChoiceCorrect = q.choices[idx].is_correct;
       const isSelected = selectedAnswers.includes(idx);
       
@@ -395,16 +432,9 @@ function nextQuestion() {
 
 // Reset quiz state
 function resetQuiz() {
-  if (confirm("Voulez-vous vraiment réinitialiser vos scores et recommencer ?")) {
-    scores = {
-      correct: 0,
-      incorrect: 0,
-      states: {}
-    };
-    saveState();
-    updateStats();
-    renderGrid();
-    loadQuestion(0);
+  if (confirm("Voulez-vous vraiment réinitialiser vos scores et générer un nouveau test aléatoire ?")) {
+    sessionStorage.removeItem('ccna_quiz_session');
+    location.reload(); // Reload page for a fresh randomized session
   }
 }
 
@@ -453,23 +483,18 @@ function updateStats() {
   elProgressBarFill.style.width = `${progressPercent}%`;
 }
 
-// Save scores to localStorage
+// Save scores to sessionStorage
 function saveState() {
-  localStorage.setItem('ccna_quiz_scores', JSON.stringify(scores));
-  localStorage.setItem('ccna_quiz_current_index', currentIndex);
+  const sessionData = {
+    questions,
+    scores,
+    currentIndex
+  };
+  sessionStorage.setItem('ccna_quiz_session', JSON.stringify(sessionData));
 }
 
-// Load scores from localStorage
-function loadState() {
-  const savedScores = localStorage.getItem('ccna_quiz_scores');
-  if (savedScores) {
-    scores = JSON.parse(savedScores);
-  }
-  const savedIndex = localStorage.getItem('ccna_quiz_current_index');
-  if (savedIndex) {
-    currentIndex = parseInt(savedIndex);
-  }
-}
+// Session state is loaded in init()
+
 
 // Run app init
 init();
