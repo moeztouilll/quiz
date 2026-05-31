@@ -132,7 +132,9 @@ function loadQuestion(index) {
   
   // Handle image
   if (q.image) {
+    elQuestionImage.style.opacity = '0'; // Hide temporarily
     elQuestionImage.src = q.image;
+    elQuestionImage.onload = () => { elQuestionImage.style.opacity = '1'; }; // Show when loaded
     elImageContainer.style.display = 'flex';
   } else {
     elImageContainer.style.display = 'none';
