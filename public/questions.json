@@ -3642,7 +3642,28 @@
     "question_text": "Associez le type de menace à la cause. (Toutes les options ne sont pas utilisées.) ITN (Versión 7.00) – ITNv7 Final Exam",
     "image": "https://reponseccna.com/wp-content/uploads/2021/12/2021-11-13_112035.jpg",
     "choices": [],
-    "table": null,
+    "table": [
+      {
+        "left": "mauvaise gestion des composants électriques clés (décharge électrostatique), manque de pièces de rechange critiques, câblage défaillant et mauvais étiquetage",
+        "right": "menaces de maintenance"
+      },
+      {
+        "left": "extrêmes de température (trop chaud ou trop froid) ou extrêmes d'humidité (trop humide ou trop sec)",
+        "right": "menaces environnementales"
+      },
+      {
+        "left": "dommages physiques aux serveurs, routeurs, commutateurs, installation de câblage et postes de travail",
+        "right": "menaces matérielles"
+      },
+      {
+        "left": "sursauts de tension, tension d'alimentation insuffisante (coupures de courant), alimentation non conditionnée (bruit) et perte totale de puissance",
+        "right": "menaces électriques"
+      },
+      {
+        "left": "accès non autorisé entraînant une perte de données",
+        "right": ""
+      }
+    ],
     "explanation": null,
     "extra_text": []
   },
