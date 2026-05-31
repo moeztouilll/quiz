@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simulateur d'Examen CCNA 1 - ITNv7</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <div class="app-container">
+    <!-- Sidebar / Question Navigation -->
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <div class="logo">
+          <span class="icon">⚡</span>
+          <h2>CCNA 1 Prep</h2>
+        </div>
+        <p class="subtitle">Examen Final ITNv7</p>
+      </div>
+
+      <div class="stats-panel">
+        <div class="stat-box">
+          <span class="stat-val" id="score-correct">0</span>
+          <span class="stat-lbl">Corrects</span>
+        </div>
+        <div class="stat-box">
+          <span class="stat-val" id="score-incorrect">0</span>
+          <span class="stat-lbl">Erreurs</span>
+        </div>
+        <div class="stat-box">
+          <span class="stat-val" id="score-percent">0%</span>
+          <span class="stat-lbl">Réussite</span>
+        </div>
+      </div>
+
+      <div class="nav-filters">
+        <button class="filter-btn active" data-filter="all">Tous</button>
+        <button class="filter-btn" data-filter="incorrect">Erreurs</button>
+        <button class="filter-btn" data-filter="unanswered">Non faits</button>
+      </div>
+
+      <div class="question-grid-container">
+        <h3>Index des Questions</h3>
+        <div class="question-grid" id="question-grid">
+          <!-- Question buttons injected by JS -->
+        </div>
+      </div>
+
+      <div class="sidebar-footer">
+        <button class="btn btn-secondary btn-block" id="btn-reset">Recommencer le Quiz</button>
+      </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="main-content">
+      <header class="main-header">
+        <div class="progress-container">
+          <div class="progress-text">
+            <span>Progression globale</span>
+            <span id="progress-val">0 / 158 (0%)</span>
+          </div>
+          <div class="progress-bar-bg">
+            <div class="progress-bar-fill" id="progress-bar-fill"></div>
+          </div>
+        </div>
+      </header>
+
+      <section class="quiz-section">
+        <!-- Main Quiz Card -->
+        <div class="quiz-card" id="quiz-card">
+          <div class="card-header">
+            <span class="badge" id="question-badge">Question 1</span>
+            <span class="badge badge-type" id="question-type-badge">Choix Unique</span>
+          </div>
+
+          <div class="question-body">
+            <h1 class="question-text" id="question-text">
+              Chargement des questions...
+            </h1>
+
+            <!-- Image Illustration -->
+            <div class="question-image-container" id="image-container" style="display: none;">
+              <img id="question-image" src="" alt="Illustration CCNA">
+            </div>
+
+            <!-- Quiz Answers Container -->
+            <div class="answers-container" id="answers-container">
+              <!-- Answers injected by JS -->
+            </div>
+          </div>
+
+          <div class="card-footer">
+            <button class="btn btn-primary" id="btn-submit" disabled>Valider la réponse</button>
+            <button class="btn btn-success" id="btn-next" style="display: none;">Question Suivante →</button>
+          </div>
+        </div>
+
+        <!-- Feedback & AI Explanation Drawer -->
+        <div class="feedback-panel" id="feedback-panel" style="display: none;">
+          <div class="feedback-header">
+            <div class="feedback-status" id="feedback-status">
+              <!-- Correct / Incorrect message -->
+            </div>
+          </div>
+          <div class="feedback-body">
+            <div class="explanation-box" id="scraped-explanation-box" style="display: none;">
+              <h4>Explication du cours :</h4>
+              <p id="scraped-explanation-text"></p>
+            </div>
+            
+            <div class="explanation-box ai-explanation" id="ai-explanation-box" style="display: none;">
+              <div class="ai-header">
+                <span class="ai-sparkle">✦</span>
+                <h4>Analyse IA (Navy API) :</h4>
+              </div>
+              <div class="ai-loader" id="ai-loader">
+                <div class="spinner"></div>
+                <span>L'IA analyse votre réponse...</span>
+              </div>
+              <p id="ai-explanation-text"></p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>

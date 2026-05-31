@@ -1,0 +1,14 @@
+{
+  "name": "ccna-quiz-app",
+  "version": "1.0.0",
+  "description": "Premium Quiz App for CCNA 1 Exam",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "openai": "^4.52.0"
+  }
+}
