@@ -416,7 +416,7 @@
   {
     "num": 16,
     "question_text": "Reportez-vous à l’illustration. Quelle interface dont l’adresse IP de périphérique doit être utilisée comme paramètre de passerelle par défaut de l’hôte H1?",
-    "image": "https://ccnareponses.com/wp-content/uploads/2025/06/6122384.jpg",
+    "image": "images/q_16.jpg",
     "choices": [
       {
         "text": "R2: S0/0/1",
@@ -668,7 +668,7 @@
       }
     ],
     "table": null,
-    "explanation": null,
+    "explanation": "Explique: Lors de la conception d'un réseau sans fil, trois aspects majeurs doivent être pris en compte : la zone de couverture (pour assurer une bonne réception partout), les interférences/perturbations (dûes à d'autres appareils ou obstacles physiques), et la sécurité (le signal étant diffusé dans l'air, il est plus vulnérable aux accès non autorisés).",
     "extra_text": []
   },
   {
@@ -742,7 +742,24 @@
     "question_text": "Examinez l’illustration. Associez les réseaux aux adresses IP et aux préfixes capables de répondre aux exigences d’adressage d’hôte utilisable pour chaque réseau. (Les options ne doivent pas être toutes utilisées.) CCNA 1 ITN (Version 7.00) – Examen final ITNv7 Réponses Français 38",
     "image": "images/q_27.jpg",
     "choices": [],
-    "table": null,
+    "table": [
+      {
+        "left": "Réseau A",
+        "right": "192.168.0.0 /25"
+      },
+      {
+        "left": "Réseau B",
+        "right": "192.168.0.192 /27"
+      },
+      {
+        "left": "Réseau D",
+        "right": "192.168.0.128 /26"
+      },
+      {
+        "left": "Réseau C",
+        "right": "192.168.0.224 /30"
+      }
+    ],
     "explanation": "Explique: Le réseau A doit utiliser 192.168.0.128 /25, ce qui donne 128 adresses d’hôte. Le réseau B doit utiliser 192.168.0.0 /26, ce qui donne 64 adresses d’hôte. Le réseau C doit utiliser 192.168.0.96 /27, ce qui donne 32 adresses d’hôtes. Le réseau D doit utiliser 192.168.0.80/30, ce qui donne 4 adresses d’hôte.",
     "extra_text": []
   },
@@ -900,9 +917,34 @@
   {
     "num": 33,
     "question_text": "Associez les caractéristiques aux méthodes de transmission correspondantes. (Les options ne doivent pas être toutes utilisées.) CCNA 1 ITN (Version 7.00) – Examen final ITNv7 Réponses Français 42",
-    "image": "https://ccnareponses.com/wp-content/uploads/2021/12/2021-11-11_235847.jpg",
+    "image": "images/q_33.jpg",
     "choices": [],
-    "table": null,
+    "table": [
+      {
+        "left": "A une faible latence",
+        "right": "cut-through"
+      },
+      {
+        "left": "Peut transférer des trames incomplètes",
+        "right": "cut-through"
+      },
+      {
+        "left": "Démarre la transmission lorsque l'adresse de destination est reçue",
+        "right": "cut-through"
+      },
+      {
+        "left": "Stocke toujours la trame entière",
+        "right": "store-and-forward"
+      },
+      {
+        "left": "Vérifie le CRC avant d'effectuer la transmission",
+        "right": "store-and-forward"
+      },
+      {
+        "left": "Vérifie la longueur de la trame avant d'effectuer la transmission",
+        "right": "store-and-forward"
+      }
+    ],
     "explanation": "Explique: Un commutateur store-and-forward stocke toujours la trame entière avant la transmission, et vérifie son CRC et la longueur de la trame. Un commutateur direct peut transmettre des trames avant de recevoir le champ d’adresse de destination, présentant ainsi moins de latence qu’un commutateur de stockage et retransmission. Étant donné que la trame peut commencer à être transmise avant d’être complètement reçue, le commutateur peut transmettre une trame corrompue ou incomplète. Toutes les méthodes de transfert nécessitent un commutateur de couche 2 pour transférer les trames de diffusion.",
     "extra_text": []
   },
@@ -941,7 +983,36 @@
     "question_text": "Associez les fonctionnalités aux catégories (Les propositions ne doivent pas être toutes utilisées.) CCNA 1 ITN (Version 7.00) – Examen final ITNv7 Réponses Français 43",
     "image": "images/q_35.jpg",
     "choices": [],
-    "table": null,
+    "table": [
+      {
+        "left": "contenu dans l'en-tête de couche 3",
+        "right": "Adresse IP"
+      },
+      {
+        "left": "contenu dans l'en-tête de couche 2",
+        "right": "Adresse MAC"
+      },
+      {
+        "left": "séparés en OUI et un identifiantunique",
+        "right": "Adresse MAC"
+      },
+      {
+        "left": "séparés en une partie réseau et un identifiantunique",
+        "right": "Adresse IP"
+      },
+      {
+        "left": "32 ou 128 bits",
+        "right": "Adresse IP"
+      },
+      {
+        "left": "48 bits",
+        "right": "Adresse MAC"
+      },
+      {
+        "left": "64 bits",
+        "right": "Adresse IP"
+      }
+    ],
     "explanation": null,
     "extra_text": []
   },
@@ -1281,9 +1352,26 @@
     "num": 48,
     "question_text": "Reportez-vous à l’illustration.Hôte B sur le sous-réseau Enseignants transmet un paquet à l’hôte D sur le sous-réseau Students. Quelles adresses de couche 2 et de couche 3 sont contenues dans les PDU qui sont transmises de l’hôte B au routeur? CCNA 1 ITN (Version 7.00) – Examen final ITNv7 Réponses Français 53 Adresse de destination de la couche 2 = 00-00-0c-94-36-ab Adresse source de la couche 2 = 00-00-0c-94-36-bb Adresse de destination de la couche 3 = 172.16.20.200 Adresse source de la couche 3 = 172.16.10.200 Adresse de destination de la couche 2 = 00-00-0c-94-36-cd Adresse source de la couche 2 = 00-00-0c-94-36-bb Adresse de destination de la couche 3 = 172.16.20.99 Adresse source de la couche 3 = 172.16.10.200 Adresse de destination de la couche 2 = 00-00-0c-94-36-dd Adresse source de la couche 2 = 00-00-0c-94-36-bb Adresse de destination de la couche 3 = 172.16.20.200 Adresse source de la couche 3 = 172.16.10.200 Adresse de destination de la couche 2 = 00-00-0c-94-36-ab Adresse source de la couche 2 = 00-00-0c-94-36-bb Adresse de destination de la couche 3 = 172.16.20.200 Adresse source de la couche 3 = 172.16.100.200",
     "image": "images/q_48.jpg",
-    "choices": [],
+    "choices": [
+      {
+        "text": "Passerelle par défaut de l'hôte A",
+        "is_correct": false
+      },
+      {
+        "text": "Interface S0/0/0 du R1",
+        "is_correct": false
+      },
+      {
+        "text": "Interface Fa0/0 du R1",
+        "is_correct": true
+      },
+      {
+        "text": "Adresse MAC de l'hôte B",
+        "is_correct": false
+      }
+    ],
     "table": null,
-    "explanation": null,
+    "explanation": "Lorsque l'hôte B envoie un paquet à un autre sous-réseau, il l'envoie à sa passerelle par défaut. Le routeur R1 reçoit le paquet sur son interface connectée au sous-réseau Enseignants (Fa0/0).",
     "extra_text": []
   },
   {
@@ -1559,7 +1647,7 @@
   {
     "num": 58,
     "question_text": "Examinez l’illustration. D’après le résultat de la commande, quelles affirmations sur la connectivité réseau sont correctes ? (Choisissez deux propositions.) CCNA 1 ITN (Version 7.00) – Examen final ITNv7 Réponses Français 60",
-    "image": "https://ccnareponses.com/wp-content/uploads/2021/12/2021-11-12_000440.jpg",
+    "image": "images/q_58.jpg",
     "choices": [
       {
         "text": "Il existe 4 sauts entre ce périphérique et le périphérique situé à l’adresse 192.168.100.1.",
@@ -1693,7 +1781,7 @@
   {
     "num": 63,
     "question_text": "Quelles informations la commande show startup-config affiche-t-elle ?",
-    "image": "images/q_63.jpg",
+    "image": null,
     "choices": [
       {
         "text": "Le programme bootstrap de la mémoire morte",
@@ -1719,7 +1807,7 @@
   {
     "num": 64,
     "question_text": "Examinez l’illustration. Quelles deux adresses réseau peuvent être attribuées au réseau accueillant 10 hôtes ? Dans votre réponse, vous devez gaspiller le moins d’adresses possible, ne pas réutiliser des adresses déjà attribuées et rester dans la plage d’adresses 10.18.10.0/24. (Choisissez deux propositions.)",
-    "image": null,
+    "image": "images/q_64.jpg",
     "choices": [
       {
         "text": "10.18.10.224/28",
@@ -1779,7 +1867,7 @@
   {
     "num": 66,
     "question_text": "Quelles sont les trois normes couramment suivies pour la construction et l’installation de câblage? (Choisissez trois réponses.)",
-    "image": "images/q_66.jpg",
+    "image": null,
     "choices": [
       {
         "text": "brochage",
@@ -1813,10 +1901,27 @@
   {
     "num": 67,
     "question_text": "Quel connecteur est utilisé avec le câblage à paires torsadées dans un réseau local Ethernet?",
-    "image": null,
-    "choices": [],
+    "image": "images/q_67.jpg",
+    "choices": [
+      {
+        "text": "RJ-11",
+        "is_correct": false
+      },
+      {
+        "text": "RJ-45",
+        "is_correct": true
+      },
+      {
+        "text": "ST",
+        "is_correct": false
+      },
+      {
+        "text": "BNC",
+        "is_correct": false
+      }
+    ],
     "table": null,
-    "explanation": null,
+    "explanation": "Le connecteur RJ-45 est le connecteur standard utilisé avec le câblage à paires torsadées (UTP/STP) dans un réseau local Ethernet.",
     "extra_text": []
   },
   {
@@ -1878,7 +1983,7 @@
   {
     "num": 70,
     "question_text": "Quel service est fourni par DNS ?",
-    "image": "images/q_70.jpg",
+    "image": null,
     "choices": [
       {
         "text": "permet de transférer des données entre un client et un serveur.",
@@ -1904,7 +2009,7 @@
   {
     "num": 71,
     "question_text": "Examinez l’illustration. Les commutateurs présentent leur configuration par défaut. L’hôte A doit communiquer avec l’hôte D, mais l’hôte A ne peut avoir l’adresse MAC pour sa passerelle par défaut. Quels hôtes de réseau recevront la requête ARP envoyée par l’hôte A ?",
-    "image": null,
+    "image": "images/q_71.jpg",
     "choices": [
       {
         "text": "Uniquement les hôtes A, B et C",
@@ -2132,7 +2237,7 @@
   {
     "num": 89,
     "question_text": "Quelle méthode de commutation supprime les trames qui ne passent pas avec succès le contrôle FCS ?",
-    "image": "images/q_89.jpg",
+    "image": null,
     "choices": [
       {
         "text": "commutation « cut-through »",
@@ -2158,16 +2263,37 @@
   {
     "num": 80,
     "question_text": "Faites correspondre le champ d’en-tête avec la couche appropriée du modèle OSI. (Toutes les options ne doivent pas être utilisées.)",
-    "image": null,
+    "image": "images/q_80.jpg",
     "choices": [],
-    "table": null,
+    "table": [
+      {
+        "left": "Numéro de séquence",
+        "right": "Couche Transport"
+      },
+      {
+        "left": "Code de sous-réseau",
+        "right": "Couche Réseau"
+      },
+      {
+        "left": "Numéro de port source",
+        "right": "Couche Transport"
+      },
+      {
+        "left": "Adresse IP de destination",
+        "right": "Couche Réseau"
+      },
+      {
+        "left": "Adresse MAC de destination",
+        "right": "Couche Liaison de données"
+      }
+    ],
     "explanation": null,
     "extra_text": []
   },
   {
     "num": 81,
     "question_text": "Quel est l’avantage pour les petites entreprises d’adopter IMAP au lieu de POP ?",
-    "image": "images/q_81.jpg",
+    "image": null,
     "choices": [
       {
         "text": "IMAP envoie et récupère les e-mails, tandis que POP récupère uniquement les e-mails.",
@@ -2195,14 +2321,31 @@
     "question_text": "Associez les affirmations suivantes aux modèles de réseau correspondants. (Les options ne sont pas toutes utilisées.)",
     "image": "images/q_82.jpg",
     "choices": [],
-    "table": null,
+    "table": [
+      {
+        "left": "Ce sont les réseaux les plus simples à configurer.",
+        "right": "Réseau d'égal à égal (Peer-to-Peer)"
+      },
+      {
+        "left": "Aucun ordinateur ne contrôle le réseau.",
+        "right": "Réseau d'égal à égal (Peer-to-Peer)"
+      },
+      {
+        "left": "Il exige des logiciels et périphériques réseau spécifiques.",
+        "right": "Réseau client-serveur"
+      },
+      {
+        "left": "Un serveur gère et contrôle l'accès au réseau.",
+        "right": "Réseau client-serveur"
+      }
+    ],
     "explanation": null,
     "extra_text": []
   },
   {
     "num": 83,
     "question_text": "Examinez l’illustration. Si Hôte1 doit transférer un fichier au serveur, quelles couches du modèle TCP/IP faut-il utiliser ?",
-    "image": null,
+    "image": "images/q_83.jpg",
     "choices": [
       {
         "text": "Uniquement les couches application, Internet et accès réseau",
@@ -2364,7 +2507,7 @@
     "extra_text": []
   },
   {
-    "num": 89,
+    "num": 162,
     "question_text": "Citez deux caractéristiques communes aux protocoles TCP et UDP. (Choisissez deux propositions.)",
     "image": null,
     "choices": [
@@ -2395,7 +2538,8 @@
     ],
     "table": null,
     "explanation": "Explique: TCP et UDP utilisent tous deux les numéros de port source et de destination pour distinguer les différents flux de données et pour transmettre les bons segments de données aux bonnes applications. La vérification des erreurs de l’en-tête et des données est effectuée par les deux protocoles en utilisant un calcul de somme de contrôle pour déterminer l’intégrité des données reçues. TCP est orienté connexion et utilise une poignée de main à trois pour établir une connexion initiale. TCP utilise également la fenêtre pour réguler la quantité de trafic envoyé avant de recevoir un accusé de réception. UDP est sans connexion et est le meilleur protocole pour transporter des signaux VoIP numérisés.",
-    "extra_text": []
+    "extra_text": [],
+    "original_num": 89
   },
   {
     "num": 90,
@@ -2560,7 +2704,7 @@
   {
     "num": 96,
     "question_text": "De quel type de menace à la sécurité parle-t-on lorsqu’un tableur exécuté en tant que logiciel complémentaire désactive le pare-feu logiciel local ?",
-    "image": "images/q_96.jpg",
+    "image": null,
     "choices": [
       {
         "text": "dépassement de mémoire tampon",
@@ -2588,8 +2732,25 @@
     "question_text": "Associez les éléments ci-dessous aux types de topologie correspondants. (Les options ne sont pas toutes utilisées.)",
     "image": null,
     "choices": [],
-    "table": null,
-    "explanation": null,
+    "table": [
+      {
+        "left": "Un nœud intermédiaire défaillant interrompt les communications",
+        "right": "Étoile"
+      },
+      {
+        "left": "Chaque nœud est connecté à deux autres nœuds",
+        "right": "Anneau"
+      },
+      {
+        "left": "Un seul nœud intermédiaire défaillant n'interrompt pas les communications",
+        "right": "Étoile étendue"
+      },
+      {
+        "left": "Tous les nœuds reçoivent toutes les transmissions",
+        "right": "Bus"
+      }
+    ],
+    "explanation": "Explique: \n- **Étoile** : Tous les nœuds se connectent à un nœud central (commutateur/concentrateur). Si ce dernier tombe en panne, toute communication est interrompue.\n- **Anneau** : Chaque nœud est connecté à deux voisins immédiats, formant une boucle.\n- **Étoile étendue** : Composée de plusieurs étoiles interconnectées. La défaillance d'un seul commutateur intermédiaire ne coupe pas tout le réseau.\n- **Bus** : Tous les nœuds partagent un même câble. Tous les nœuds reçoivent toutes les transmissions.",
     "extra_text": []
   },
   {
@@ -2651,7 +2812,7 @@
   {
     "num": 100,
     "question_text": "Deux requêtes ping ont été exécutées depuis un hôte sur un réseau local. La première requête ping a été exécutée sur l’adresse IP de la passerelle par défaut de l’hôte et elle a échoué. La deuxième requête ping a été exécutée sur l’adresse IP d’un hôte situé en dehors du réseau local et elle a abouti. Quelle est la cause probable de l’échec de la requête ping ?",
-    "image": "images/q_100.jpg",
+    "image": null,
     "choices": [
       {
         "text": "La passerelle par défaut est configurée avec une adresse IP incorrecte.",
@@ -2677,7 +2838,7 @@
   {
     "num": 101,
     "question_text": "Reportez-vous à l’illustration. L’administrateur réseau a attribué au réseau local de LBMISS une plage d’adresses de 192.168.10.0. Cette plage d’adresses a été sous-réseau à l’aide d’un préfixe /29. Afin d’accueillir un nouveau bâtiment, le technicien a décidé d’utiliser le cinquième sous-réseau pour configurer le nouveau réseau (le sous-réseau zéro est le premier sous-réseau). Par les stratégies d’entreprise, l’interface du routeur reçoit toujours la première adresse d’hôte utilisable et le serveur de groupe de travail reçoit la dernière adresse d’hôte utilisable. Quelle configuration doit être entrée dans les propriétés du serveur de groupe de travail pour permettre la connectivité à Internet?",
-    "image": null,
+    "image": "images/q_101.jpg",
     "choices": [
       {
         "text": "Adresse IP: 192.168.10.38 masque de sous-réseau: 255.255.255.248, passerelle par défaut: 192.168.10.33",
@@ -2973,7 +3134,7 @@
   {
     "num": 111,
     "question_text": "Un serveur reçoit un paquet client. Le numéro de port de destination du paquet est 110. Quelle application de service le client demande-t-il?",
-    "image": "images/q_111.png",
+    "image": null,
     "choices": [
       {
         "text": "SMTP",
@@ -2999,7 +3160,7 @@
   {
     "num": 112,
     "question_text": "Reportez-vous à l’illustration. Un ingénieur réseau a reçu l’adresse réseau 192.168.99.0 et un masque de sous-réseau 255.255.255.192 pour le sous-réseau sur les quatre réseaux indiqués. Combien d’adresses hôtes au total sont inutilisées sur les quatre sous-réseaux?",
-    "image": null,
+    "image": "images/q_112.png",
     "choices": [
       {
         "text": "72",
@@ -3031,7 +3192,20 @@
     "question_text": "Associez les descriptions aux mécanismes TCP correspondants. (Les options ne doivent pas être toutes utilisées.)",
     "image": "images/q_113.jpg",
     "choices": [],
-    "table": null,
+    "table": [
+      {
+        "left": "Permettent au récepteur d'indiquer de façon fiable à l'expéditeur les octets qui ont été reçus correctement",
+        "right": "Accusés de réception"
+      },
+      {
+        "left": "Définit le nombre d'octets que le récepteur est capable de traiter à un moment donné",
+        "right": "Taille de la fenêtre"
+      },
+      {
+        "left": "Permettent au périphérique de destination de reconstituer les données dans un ordre précis",
+        "right": "Numéros de séquence"
+      }
+    ],
     "explanation": null,
     "extra_text": []
   },
@@ -3068,7 +3242,7 @@
   {
     "num": 115,
     "question_text": "Quelles sont les deux méthodes les plus efficaces pour la protection contre les programmes malveillants ? (Choisissez deux réponses.)",
-    "image": "images/q_115.jpg",
+    "image": null,
     "choices": [
       {
         "text": "Installer et mettre à jour un logiciel antivirus",
@@ -3104,23 +3278,57 @@
     "question_text": "Associez les protocoles d’application aux protocoles de transport corrects.",
     "image": "images/q_116.jpg",
     "choices": [],
-    "table": null,
+    "table": [
+      {
+        "left": "HTTP",
+        "right": "TCP"
+      },
+      {
+        "left": "FTP",
+        "right": "TCP"
+      },
+      {
+        "left": "SMTP",
+        "right": "TCP"
+      },
+      {
+        "left": "TFTP",
+        "right": "UDP"
+      },
+      {
+        "left": "DHCP",
+        "right": "UDP"
+      }
+    ],
     "explanation": null,
     "extra_text": []
   },
   {
     "num": 117,
     "question_text": "Faire correspondre la fonction du pare-feu au type de protection contre les menaces qu’il fournit au réseau. (Les propositions ne doivent pas être toutes utilisées.)",
-    "image": null,
+    "image": "images/q_117.jpg",
     "choices": [],
-    "table": null,
+    "table": [
+      {
+        "left": "Empêche ou autorise l'accès en fonction des adresses MAC ou des adresses IP",
+        "right": "Filtrage des paquets"
+      },
+      {
+        "left": "Empêche ou autorise l'accès en fonction des ports d'application",
+        "right": "Filtrage des applications"
+      },
+      {
+        "left": "S'assure que les connexions TCP sont établies correctement",
+        "right": "Inspection dynamique (Stateful)"
+      }
+    ],
     "explanation": null,
     "extra_text": []
   },
   {
     "num": 118,
     "question_text": "Un utilisateur envoie une requête HTTP à un serveur Web sur un réseau distant. Pendant l’encapsulation de cette requête, quelles informations sont ajoutées au champ d’adresse d’une trame pour indiquer la destination ?",
-    "image": "images/q_118.jpg",
+    "image": null,
     "choices": [
       {
         "text": "L’adresse MAC de l’hôte de destination",
@@ -3146,7 +3354,7 @@
   {
     "num": 119,
     "question_text": "Examinez l’illustration. Quels trois éléments factuels peut-on déduire du résultat de la commande show ip interface brief ? (Choisissez trois propositions.)",
-    "image": null,
+    "image": "images/q_119.jpg",
     "choices": [
       {
         "text": "Le commutateur peut être géré à distance.",
@@ -3370,9 +3578,30 @@
   {
     "num": 127,
     "question_text": "Faites correspondre chaque type de champ de trame à sa fonction. (Les options ne sont pas toutes utilisées.)",
-    "image": null,
+    "image": "images/q_127.jpg",
     "choices": [],
-    "table": null,
+    "table": [
+      {
+        "left": "Préambule",
+        "right": "Synchronisation"
+      },
+      {
+        "left": "Adresse MAC de destination",
+        "right": "Adressage"
+      },
+      {
+        "left": "Données",
+        "right": "Encapsulation"
+      },
+      {
+        "left": "FCS",
+        "right": "Détection d'erreurs"
+      },
+      {
+        "left": "Délimiteur de début de trame",
+        "right": "Synchronisation"
+      }
+    ],
     "explanation": null,
     "extra_text": []
   },
@@ -3543,9 +3772,9 @@
     ]
   },
   {
-    "num": 16,
+    "num": 163,
     "question_text": "Quelle caractéristique décrit le vol d’identité ?",
-    "image": "https://reponseccna.com/wp-content/uploads/2021/12/24.jpg",
+    "image": "images/q_16.jpg",
     "choices": [
       {
         "text": "l’utilisation d’identifiants volés pour accéder à des données privées",
@@ -3566,25 +3795,44 @@
     ],
     "table": null,
     "explanation": null,
-    "extra_text": []
+    "extra_text": [],
+    "original_num": 16
   },
   {
-    "num": 24,
+    "num": 164,
     "question_text": "Faites correspondre chaque élément au type de diagramme de topologie sur lequel il est généralement identifié. (Toutes les options ne sont pas utilisées.)",
     "image": null,
     "choices": [],
-    "table": null,
+    "table": [
+      {
+        "left": "Périphériques finaux",
+        "right": "Topologie physique"
+      },
+      {
+        "left": "Emplacement des câbles",
+        "right": "Topologie physique"
+      },
+      {
+        "left": "Comment les données accèdent au réseau",
+        "right": "Topologie logique"
+      },
+      {
+        "left": "Ports virtuels",
+        "right": "Topologie logique"
+      }
+    ],
     "explanation": null,
-    "extra_text": []
+    "extra_text": [],
+    "original_num": 24
   },
   {
-    "num": 25,
+    "num": 165,
     "question_text": "Quelles sont les deux informations affichées dans la sortie de la commande show ip interface brief ? (Choisissez deux réponses.)",
     "image": null,
     "choices": [
       {
         "text": "Adresses IP",
-        "is_correct": false
+        "is_correct": true
       },
       {
         "text": "description des interfaces",
@@ -3600,7 +3848,7 @@
       },
       {
         "text": "Statuts de la couche 1",
-        "is_correct": false
+        "is_correct": true
       },
       {
         "text": "Paramètres de vitesse et de duplex",
@@ -3608,11 +3856,12 @@
       }
     ],
     "table": null,
-    "explanation": "Explique: La commande show ip interface brief affiche l’adresse IP de chaque interface, ainsi que l’état opérationnel des interfaces au niveau de la couche 1 et de la couche 2. Afin de voir l’interface descriptions et paramètres de vitesse et de duplex, utilisez la commande show running-config interface. Les adresses de saut suivant sont affichées dans la table de routage avec la commande show ip route, et l’adresse MAC d’une interface peut être vue avec la commande show interfaces.",
-    "extra_text": []
+    "explanation": "Explique: La commande show ip interface brief affiche l’adresse IP de chaque interface, ainsi que l’état opérationnel des interfaces au niveau de la couche 1 (Status) et de la couche 2 (Protocol). Les descriptions des interfaces, les paramètres de vitesse/duplex et les adresses MAC ne sont pas affichés par cette commande.",
+    "extra_text": [],
+    "original_num": 25
   },
   {
-    "num": 50,
+    "num": 166,
     "question_text": "Un administrateur réseau ajoute un nouveau réseau local à une succursale. Le nouveau LAN doit prendre en charge 90 appareils connectés. Quel est le plus petit masque de réseau que l’administrateur réseau peut utiliser pour le nouveau réseau ?",
     "image": null,
     "choices": [
@@ -3635,12 +3884,13 @@
     ],
     "table": null,
     "explanation": null,
-    "extra_text": []
+    "extra_text": [],
+    "original_num": 50
   },
   {
-    "num": 58,
-    "question_text": "Associez le type de menace à la cause. (Toutes les options ne sont pas utilisées.) ITN (Versión 7.00) – ITNv7 Final Exam",
-    "image": "https://reponseccna.com/wp-content/uploads/2021/12/2021-11-13_112035.jpg",
+    "num": 167,
+    "question_text": "Associez le type de menace à la cause. (Toutes les options ne sont pas utilisées.)",
+    "image": null,
     "choices": [],
     "table": [
       {
@@ -3658,17 +3908,14 @@
       {
         "left": "sursauts de tension, tension d'alimentation insuffisante (coupures de courant), alimentation non conditionnée (bruit) et perte totale de puissance",
         "right": "menaces électriques"
-      },
-      {
-        "left": "accès non autorisé entraînant une perte de données",
-        "right": ""
       }
     ],
-    "explanation": null,
-    "extra_text": []
+    "explanation": "Explique: Les menaces physiques pesant sur la sécurité des équipements d'un réseau se divisent en 4 catégories :\n- Menaces de maintenance (mauvaise gestion des composants, manque de pièces de rechange, câblage défaillant/mauvais étiquetage).\n- Menaces environnementales (extrêmes de température ou d'humidité).\n- Menaces matérielles (dommages physiques aux serveurs, routeurs, commutateurs, câblage).\n- Menaces électriques (sursauts de tension, baisse de tension, perte totale de puissance).\nL'accès non autorisé entraînant une perte de données est une menace logique de sécurité, elle ne fait pas partie des menaces physiques.",
+    "extra_text": [],
+    "original_num": 58
   },
   {
-    "num": 60,
+    "num": 168,
     "question_text": "Quel service est fourni par HTTP ?",
     "image": null,
     "choices": [
@@ -3691,10 +3938,11 @@
     ],
     "table": null,
     "explanation": null,
-    "extra_text": []
+    "extra_text": [],
+    "original_num": 60
   },
   {
-    "num": 61,
+    "num": 169,
     "question_text": "Un paquet client est reçu par un serveur. Le paquet a un numéro de port de destination de 67. Quel service le client demande-t-il ?",
     "image": null,
     "choices": [
@@ -3717,10 +3965,11 @@
     ],
     "table": null,
     "explanation": null,
-    "extra_text": []
+    "extra_text": [],
+    "original_num": 61
   },
   {
-    "num": 65,
+    "num": 170,
     "question_text": "Quelle caractéristique décrit l’antispyware ?",
     "image": null,
     "choices": [
@@ -3743,10 +3992,11 @@
     ],
     "table": null,
     "explanation": null,
-    "extra_text": []
+    "extra_text": [],
+    "original_num": 65
   },
   {
-    "num": 72,
+    "num": 171,
     "question_text": "Quelles sont les deux solutions de sécurité les plus susceptibles d’être utilisées uniquement dans un environnement d’entreprise ? (Choisissez deux réponses.)",
     "image": null,
     "choices": [
@@ -3773,10 +4023,11 @@
     ],
     "table": null,
     "explanation": null,
-    "extra_text": []
+    "extra_text": [],
+    "original_num": 72
   },
   {
-    "num": 73,
+    "num": 172,
     "question_text": "Quelle caractéristique décrit un logiciel antivirus ?",
     "image": null,
     "choices": [
@@ -3799,10 +4050,11 @@
     ],
     "table": null,
     "explanation": null,
-    "extra_text": []
+    "extra_text": [],
+    "original_num": 73
   },
   {
-    "num": 85,
+    "num": 173,
     "question_text": "Quelle caractéristique décrit un logiciel espion ?",
     "image": null,
     "choices": [
@@ -3825,10 +4077,11 @@
     ],
     "table": null,
     "explanation": null,
-    "extra_text": []
+    "extra_text": [],
+    "original_num": 85
   },
   {
-    "num": 88,
+    "num": 174,
     "question_text": "Quel service est fourni par FTP ?",
     "image": null,
     "choices": [
@@ -3851,10 +4104,11 @@
     ],
     "table": null,
     "explanation": null,
-    "extra_text": []
+    "extra_text": [],
+    "original_num": 88
   },
   {
-    "num": 90,
+    "num": 175,
     "question_text": "Quels sont les deux déclarations qui décrivent avec précision un avantage ou un inconvénient lors du déploiement de la NAT pour IPv4 dans un réseau ? (Choisissez deux réponses.)",
     "image": null,
     "choices": [
@@ -3885,10 +4139,11 @@
     ],
     "table": null,
     "explanation": "Explique: La traduction d’adresses réseau (NAT) est une technologie qui est implémentée dans les réseaux IPv4. Une application de NAT consiste à utiliser des adresses IP privées à l’intérieur d’un réseau et à utiliser NAT pour partager quelques adresses IP publiques pour de nombreux hôtes internes. De cette façon, il fournit une solution pour ralentir l’épuisement des adresses IPv4. Cependant, étant donné que NAT masque les adresses IP réelles utilisées par les périphériques finaux, cela peut entraîner des problèmes pour certaines applications nécessitant une connectivité de bout en bout.",
-    "extra_text": []
+    "extra_text": [],
+    "original_num": 90
   },
   {
-    "num": 93,
+    "num": 176,
     "question_text": "Quel service est fourni par BOOTP ?",
     "image": null,
     "choices": [
@@ -3911,10 +4166,11 @@
     ],
     "table": null,
     "explanation": null,
-    "extra_text": []
+    "extra_text": [],
+    "original_num": 93
   },
   {
-    "num": 94,
+    "num": 177,
     "question_text": "Quelle caractéristique décrit un logiciel publicitaire ?",
     "image": null,
     "choices": [
@@ -3937,10 +4193,11 @@
     ],
     "table": null,
     "explanation": null,
-    "extra_text": []
+    "extra_text": [],
+    "original_num": 94
   },
   {
-    "num": 103,
+    "num": 178,
     "question_text": "Quelle caractéristique décrit un VPN ?",
     "image": null,
     "choices": [
@@ -3963,10 +4220,11 @@
     ],
     "table": null,
     "explanation": null,
-    "extra_text": []
+    "extra_text": [],
+    "original_num": 103
   },
   {
-    "num": 111,
+    "num": 179,
     "question_text": "Un paquet client est reçu par un serveur. Le paquet a un numéro de port de destination de 143. Quel service le client demande-t-il ?",
     "image": null,
     "choices": [
@@ -3989,37 +4247,31 @@
     ],
     "table": null,
     "explanation": null,
-    "extra_text": []
+    "extra_text": [],
+    "original_num": 111
   },
   {
-    "num": 117,
+    "num": 180,
     "question_text": "Un utilisateur exécute un tracert sur un périphérique distant. À quel moment un routeur, qui se trouve sur le chemin de l’appareil de destination, arrêterait-il de transférer le paquet ?",
-    "image": null,
-    "choices": [
+    "image": "images/q_117.jpg",
+    "choices": [],
+    "table": [
       {
-        "text": "lorsque le routeur reçoit un message ICMP Time Exceeded",
-        "is_correct": false
+        "left": "Empêche ou autorise l'accès en fonction des adresses MAC ou des adresses IP",
+        "right": "Filtrage des paquets"
       },
       {
-        "text": "lorsque la valeur RTT atteint zéro",
-        "is_correct": false
+        "left": "Empêche ou autorise l'accès en fonction des ports d'application",
+        "right": "Filtrage des applications"
       },
       {
-        "text": "lorsque l’hôte répond avec un message ICMP Echo Reply",
-        "is_correct": false
-      },
-      {
-        "text": "lorsque la valeur du champ TTL atteint zéro",
-        "is_correct": false
-      },
-      {
-        "text": "lorsque les valeurs des messages de demande d’écho et de réponse d’écho atteignent zéro",
-        "is_correct": false
+        "left": "S'assure que les connexions TCP sont établies correctement",
+        "right": "Inspection dynamique (Stateful)"
       }
     ],
-    "table": null,
     "explanation": "Explique: Lorsqu’un routeur reçoit un paquet traceroute, la valeur du champ TTL est décrémentée de 1. Lorsque la valeur du champ atteint zéro, le routeur récepteur ne transmettra pas le paquet et renverra un message ICMP Time Exceeded à la source.",
-    "extra_text": []
+    "extra_text": [],
+    "original_num": 117
   },
   {
     "num": 141,
@@ -4050,7 +4302,7 @@
   {
     "num": 142,
     "question_text": "Un administrateur réseau ajoute un nouveau réseau local à une succursale. Le nouveau LAN doit prendre en charge 25 appareils connectés. Quel est le plus petit masque de réseau que l’administrateur réseau peut utiliser pour le nouveau réseau ?",
-    "image": "images/q_142.jpg",
+    "image": null,
     "choices": [
       {
         "text": "255.255.255.128",
@@ -4075,54 +4327,106 @@
   },
   {
     "num": 147,
-    "question_text": "Référez-vous à l’exposition. Faites correspondre le réseau avec l’adresse IP et le préfixe corrects qui satisferont les exigences d’adressage hôte utilisables pour chaque réseau. (Toutes les options ne sont pas utilisées.) 148. Quelle caractéristique décrit une attaque DoS ?",
-    "image": "https://itexamanswers.net/wp-content/uploads/2016/03/2017-05-23_151007-1.png",
-    "choices": [
+    "question_text": "Référez-vous à l'exposition. Faites correspondre le réseau avec l'adresse IP et le préfixe corrects qui satisferont les exigences d'adressage hôte utilisables pour chaque réseau. (Toutes les options ne sont pas utilisées.)",
+    "image": "images/q_147.jpg",
+    "choices": [],
+    "table": [
       {
-        "text": "l’utilisation d’identifiants volés pour accéder à des données privées",
-        "is_correct": false
+        "left": "Réseau A (100 hôtes)",
+        "right": "192.168.0.0/25"
       },
       {
-        "text": "un appareil réseau qui filtre l’accès et le trafic entrant dans un réseau",
-        "is_correct": false
+        "left": "Réseau B (50 hôtes)",
+        "right": "192.168.0.128/26"
       },
       {
-        "text": "logiciel installé sur l’appareil de l’utilisateur et collectant des informations sur l’utilisateur",
-        "is_correct": false
+        "left": "Réseau C (25 hôtes)",
+        "right": "192.168.0.192/27"
       },
       {
-        "text": "une attaque qui ralentit ou bloque un appareil ou un service réseau",
-        "is_correct": false
+        "left": "Réseau D (10 hôtes)",
+        "right": "192.168.0.224/28"
       }
     ],
-    "table": null,
     "explanation": "Explique: Les réseaux peer-to-peer ne nécessitent pas l’utilisation d’un serveur dédié, et les appareils peuvent assumer simultanément les rôles de client et de serveur sur demande. Parce qu’ils ne nécessitent pas de comptes ou d’autorisations formalisés, ils sont mieux utilisés dans des situations limitées. Les applications peer-to-peer nécessitent une interface utilisateur et un service d’arrière-plan pour s’exécuter, et peuvent être utilisées dans des situations plus diverses.",
     "extra_text": []
   },
   {
-    "num": 151,
-    "question_text": "Associez une instruction au modèle de réseau associé. (Toutes les options ne sont pas utilisées.) Placez les options dans l’ordre suivant :réseau pair à pair [+] aucun serveur dédié n’est requis [+] les rôles client et serveur sont définis par requête application peer-to-peer [#] nécessite une interface utilisateur spécifique [#] un service d’arrière-plan est requis 156. Quelle caractéristique décrit un IPS ?",
+    "num": 148,
+    "question_text": "Quelle caractéristique décrit une attaque DoS ?",
     "image": null,
     "choices": [
       {
-        "text": "un protocole de tunneling qui fournit aux utilisateurs distants un accès sécurisé au réseau d’une organisation",
+        "text": "Un logiciel déguisé en programme légitime qui s'exécute sur un ordinateur",
         "is_correct": false
       },
       {
-        "text": "un appareil réseau qui filtre l’accès et le trafic entrant dans un réseau",
+        "text": "Une attaque réseau qui ralentit ou plante les services en envoyant des requêtes excessives à un hôte",
+        "is_correct": true
+      },
+      {
+        "text": "Un logiciel qui recueille des informations personnelles sans le consentement de l'utilisateur",
         "is_correct": false
       },
       {
-        "text": "logiciel qui identifie les menaces à propagation rapide",
-        "is_correct": false
-      },
-      {
-        "text": "logiciel sur un routeur qui filtre le trafic en fonction des adresses IP ou des applications",
+        "text": "Une attaque qui modifie les adresses IP dans les paquets réseau",
         "is_correct": false
       }
     ],
     "table": null,
-    "explanation": null,
+    "explanation": "Une attaque par déni de service (DoS) vise à rendre un service indisponible en le submergeant de requêtes excessives, ce qui épuise les ressources du serveur cible.",
+    "extra_text": []
+  },
+  {
+    "num": 151,
+    "question_text": "Associez une instruction au modèle de réseau associé. (Toutes les options ne sont pas utilisées.)",
+    "image": "images/q_151.png",
+    "choices": [],
+    "table": [
+      {
+        "left": "Aucun serveur dédié n'est requis",
+        "right": "Réseau pair à pair"
+      },
+      {
+        "left": "Les rôles client et serveur sont définis par requête",
+        "right": "Réseau pair à pair"
+      },
+      {
+        "left": "Nécessite une interface utilisateur spécifique",
+        "right": "Application peer-to-peer"
+      },
+      {
+        "left": "Un service d'arrière-plan est requis",
+        "right": "Application peer-to-peer"
+      }
+    ],
+    "explanation": "Les réseaux peer-to-peer ne nécessitent pas l'utilisation d'un serveur dédié, et les appareils peuvent assumer simultanément les rôles de client et de serveur sur demande. Les applications peer-to-peer nécessitent une interface utilisateur et un service d'arrière-plan pour s'exécuter.",
+    "extra_text": []
+  },
+  {
+    "num": 156,
+    "question_text": "Quelle caractéristique décrit un IPS ?",
+    "image": null,
+    "choices": [
+      {
+        "text": "Un protocole de tunneling qui fournit aux utilisateurs distants un accès sécurisé au réseau d'une organisation",
+        "is_correct": false
+      },
+      {
+        "text": "Un appareil réseau qui filtre l'accès et le trafic entrant dans un réseau",
+        "is_correct": false
+      },
+      {
+        "text": "Logiciel qui identifie les menaces à propagation rapide",
+        "is_correct": true
+      },
+      {
+        "text": "Logiciel sur un routeur qui filtre le trafic en fonction des adresses IP ou des applications",
+        "is_correct": false
+      }
+    ],
+    "table": null,
+    "explanation": "Un IPS (Intrusion Prevention System) est un logiciel qui identifie les menaces à propagation rapide et peut bloquer automatiquement le trafic malveillant en temps réel, contrairement à un IDS qui se contente de détecter.",
     "extra_text": []
   },
   {

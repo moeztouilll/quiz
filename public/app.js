@@ -51,7 +51,7 @@ async function init() {
       currentIndex = data.currentIndex;
     } else {
       // Fresh start: Fetch questions
-      const response = await fetch('questions.json');
+      const response = await fetch('questions.json?v=4');
       if (!response.ok) throw new Error("Failed to load questions.json");
       let loadedQuestions = await response.json();
       
@@ -133,7 +133,7 @@ function loadQuestion(index) {
   // Handle image
   if (q.image) {
     elQuestionImage.style.opacity = '0'; // Hide temporarily
-    elQuestionImage.src = q.image;
+    elQuestionImage.src = q.image + '?v=3'; // Bypass browser cache
     elQuestionImage.onload = () => { elQuestionImage.style.opacity = '1'; }; // Show when loaded
     elImageContainer.style.display = 'flex';
   } else {
@@ -413,12 +413,14 @@ async function revealAnswers(q, isCorrect) {
       if (data.explanation) {
         elAiExplanationText.textContent = data.explanation;
       } else {
-        elAiExplanationText.textContent = "L'explication IA n'a pas pu être générée.";
+        // API unavailable - hide the AI box silently
+        elAiExplanationBox.style.display = 'none';
       }
     } catch (err) {
       console.error("AI Explain API Error:", err);
       elAiLoader.style.display = 'none';
-      elAiExplanationText.textContent = "Impossible de se connecter au service d'analyse IA.";
+      // Hide AI box instead of showing an error message
+      elAiExplanationBox.style.display = 'none';
     }
   }
 }

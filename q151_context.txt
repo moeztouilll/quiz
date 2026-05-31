@@ -1,0 +1,111 @@
+n service réseau
+   </strong>
+  </span>
+ </li>
+</ul>
+
+
+=== ELEMENT 751 (p) ===
+<p>
+ <strong>
+  151. Associez une instruction au modèle de réseau associé. (Toutes les options ne sont pas utilisées.)
+ </strong>
+ <br/>
+ <img alt="" class="aligncenter wp-image-26812 size-full" decoding="async" height="328" loading="lazy" src="https://itexamanswers.net/wp-content/uploads/2016/03/2017-05-23_151007.png" width="995"/>
+ <br/>
+ <img alt="" class="aligncenter wp-image-26813 size-full" decoding="async" height="328" loading="lazy" src="https://itexamanswers.net/wp-content/uploads/2016/03/2017-05-23_151007-1.png" width="995"/>
+ <br/>
+ <strong>
+  Placez les options dans l’ordre suivant :
+ </strong>
+ <strong>
+  réseau pair à pair
+ </strong>
+ <br/>
+ <span style="color: #ff0000;">
+  <strong>
+   [+] aucun serveur dédié n’est requis
+  </strong>
+ </span>
+ <br/>
+ <span style="color: #ff0000;">
+  <strong>
+   [+] les rôles client et serveur sont définis par requête
+  </strong>
+ </span>
+ <br/>
+ <strong>
+  application peer-to-peer
+ </strong>
+ <br/>
+ <span style="color: #ff0000;">
+  <strong>
+   [#] nécessite une interface utilisateur spécifique
+  </strong>
+ </span>
+ <br/>
+ <span style="color: #ff0000;">
+  <strong>
+   [#] un service d’arrière-plan est requis
+  </strong>
+ </span>
+ <br/>
+ <div class="message_box announce">
+  <p>
+   <b>
+    Explique:
+   </b>
+   <br/>
+   Les réseaux peer-to-peer ne nécessitent pas l’utilisation d’un serveur dédié, et les appareils peuvent assumer simultanément les rôles de client et de serveur sur demande. Parce qu’ils ne nécessitent pas de comptes ou d’autorisations formalisés, ils sont mieux utilisés dans des situations limitées. Les applications peer-to-peer nécessitent une interface utilisateur et un service d’arrière-plan pour s’exécuter, et peuvent être utilisées dans des situations plus diverses.
+  </p>
+ </div>
+ <br/>
+ <strong>
+  156. Quelle caractéristique décrit un IPS ?
+ </strong>
+</p>
+
+
+=== ELEMENT 753 (ul) ===
+<ul>
+ <li>
+  un protocole de tunneling qui fournit aux utilisateurs distants un accès sécurisé au réseau d’une organisation
+ </li>
+ <li>
+  un appareil réseau qui filtre l’accès et le trafic entrant dans un réseau
+ </li>
+ <li>
+  <span style="color: #ff0000;">
+   <strong>
+    logiciel qui identifie les menaces à propagation rapide
+   </strong>
+  </span>
+ </li>
+ <li>
+  logiciel sur un routeur qui filtre le trafic en fonction des adresses IP ou des applications
+ </li>
+</ul>
+
+
+=== ELEMENT 755 (p) ===
+<p>
+ <strong>
+  159. Référez-vous à l’exposition. Les commutateurs ont une configuration par défaut. L’hôte A doit communiquer avec l’hôte D, mais l’hôte A n’a pas l’adresse MAC de la passerelle par défaut. Quels périphériques réseau recevront la requête ARP envoyée par l’hôte A ?
+ </strong>
+</p>
+
+
+=== ELEMENT 757 (p) ===
+<p>
+ <img alt="i360201v3n1_275353.png" class="size-full wp-image-62310" decoding="async" height="252" loading="lazy" src="https://itexamanswers.net/wp-content/uploads/2020/12/i360201v3n1_275353-1608482322.6606.png" width="304"/>
+ i360201v3n1_275353.png[/légende]
+</p>
+
+
+=== ELEMENT 759 (ul) ===
+<ul>
+ <li>
+  uniquement l’hôte D
+ </li>
+ <li>
+  uniquement les hôt
