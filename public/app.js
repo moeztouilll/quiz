@@ -51,7 +51,7 @@ async function init() {
       currentIndex = data.currentIndex;
     } else {
       // Fresh start: Fetch questions
-      const response = await fetch('questions.json?v=4');
+      const response = await fetch('questions.json?v=7');
       if (!response.ok) throw new Error("Failed to load questions.json");
       let loadedQuestions = await response.json();
       

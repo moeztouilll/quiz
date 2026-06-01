@@ -2940,7 +2940,7 @@
       },
       {
         "text": "BB:BB:BB:BB:BB:BB",
-        "is_correct": false
+        "is_correct": true
       },
       {
         "text": "172.168.10.65",
@@ -2970,7 +2970,7 @@
       },
       {
         "text": "store-and-forward",
-        "is_correct": false
+        "is_correct": true
       },
       {
         "text": "fast-forward",
@@ -2988,7 +2988,7 @@
     "choices": [
       {
         "text": "Voix",
-        "is_correct": false
+        "is_correct": true
       },
       {
         "text": "P2P (peer-to-peer)",
@@ -3004,7 +3004,7 @@
       },
       {
         "text": "Vidéo",
-        "is_correct": false
+        "is_correct": true
       }
     ],
     "table": null,
@@ -3018,7 +3018,7 @@
     "choices": [
       {
         "text": "Sollicitation de voisin",
-        "is_correct": false
+        "is_correct": true
       },
       {
         "text": "Destination injoignable",
@@ -3034,7 +3034,7 @@
       },
       {
         "text": "Annonce de routeur",
-        "is_correct": false
+        "is_correct": true
       },
       {
         "text": "Dépassement du délai",
@@ -3060,7 +3060,7 @@
       },
       {
         "text": "Permet aux clients d’envoyer des courriels à un serveur de messagerie et aux serveurs d’envoyer des courriels à d’autres serveurs.",
-        "is_correct": false
+        "is_correct": true
       },
       {
         "text": "Utilise le chiffrement pour fournir un accès distant sécurisé aux périphériques et serveurs réseau.",
@@ -3078,7 +3078,7 @@
     "choices": [
       {
         "text": "Sollicitation de voisin",
-        "is_correct": false
+        "is_correct": true
       },
       {
         "text": "une requête d’écho",
@@ -3094,7 +3094,7 @@
       },
       {
         "text": "Annonce de voisin",
-        "is_correct": false
+        "is_correct": true
       },
       {
         "text": "Sollicitation de routeur",
@@ -3112,7 +3112,7 @@
     "choices": [
       {
         "text": "SSH",
-        "is_correct": false
+        "is_correct": true
       },
       {
         "text": "AUX",
@@ -3146,7 +3146,7 @@
       },
       {
         "text": "POP3",
-        "is_correct": false
+        "is_correct": true
       },
       {
         "text": "DNS",
@@ -3176,7 +3176,7 @@
       },
       {
         "text": "200",
-        "is_correct": false
+        "is_correct": true
       },
       {
         "text": "224",
@@ -3224,7 +3224,7 @@
       },
       {
         "text": "Place les informations dans la trame qui indique le protocole de couche réseau encapsulé pour la trame.",
-        "is_correct": false
+        "is_correct": true
       },
       {
         "text": "intègre des flux de couche 2 entre 10 Gigabit Ethernet sur fibre et 1 Gigabit Ethernet sur cuivre",
@@ -3232,7 +3232,7 @@
       },
       {
         "text": "ajoute des informations de contrôle Ethernet aux données du protocole réseau",
-        "is_correct": false
+        "is_correct": true
       }
     ],
     "table": null,
@@ -3456,7 +3456,7 @@
       },
       {
         "text": "255.255.255.192",
-        "is_correct": false
+        "is_correct": true
       },
       {
         "text": "255.255.255.224",
@@ -3778,7 +3778,7 @@
     "choices": [
       {
         "text": "l’utilisation d’identifiants volés pour accéder à des données privées",
-        "is_correct": false
+        "is_correct": true
       },
       {
         "text": "logiciel sur un routeur qui filtre le trafic en fonction des adresses IP ou des applications",
@@ -3867,7 +3867,7 @@
     "choices": [
       {
         "text": "255.255.255.128",
-        "is_correct": false
+        "is_correct": true
       },
       {
         "text": "255.255.255.240",
@@ -3933,7 +3933,7 @@
       },
       {
         "text": "Un ensemble de règles de base pour l’échange de texte, d’images graphiques, de sons, de vidéos et d’autres fichiers multimédias sur le Web.",
-        "is_correct": false
+        "is_correct": true
       }
     ],
     "table": null,
@@ -3952,7 +3952,7 @@
       },
       {
         "text": "DHCP",
-        "is_correct": false
+        "is_correct": true
       },
       {
         "text": "Telnet",
@@ -3975,7 +3975,7 @@
     "choices": [
       {
         "text": "applications qui protègent les terminaux contre l’infection par des logiciels malveillants",
-        "is_correct": false
+        "is_correct": true
       },
       {
         "text": "un appareil réseau qui filtre l’accès et le trafic entrant dans un réseau",
@@ -4006,11 +4006,11 @@
       },
       {
         "text": "réseaux privés virtuels",
-        "is_correct": false
+        "is_correct": true
       },
       {
         "text": "systèmes de prévention des intrusions",
-        "is_correct": false
+        "is_correct": true
       },
       {
         "text": "mots de passe forts",
@@ -4033,7 +4033,7 @@
     "choices": [
       {
         "text": "applications qui protègent les terminaux contre l’infection par des logiciels malveillants",
-        "is_correct": false
+        "is_correct": true
       },
       {
         "text": "un appareil réseau qui filtre l’accès et le trafic entrant dans un réseau",
@@ -4064,7 +4064,7 @@
       },
       {
         "text": "logiciel installé sur l’appareil de l’utilisateur et collectant des informations sur l’utilisateur",
-        "is_correct": false
+        "is_correct": true
       },
       {
         "text": "une attaque qui ralentit ou bloque un appareil ou un service réseau",
@@ -4095,7 +4095,7 @@
       },
       {
         "text": "Permet les transferts de données entre un client et un serveur de fichiers.",
-        "is_correct": false
+        "is_correct": true
       },
       {
         "text": "Utilise le cryptage pour sécuriser l’échange de texte, d’images graphiques, de sons et de vidéos sur le Web.",
@@ -4157,7 +4157,7 @@
       },
       {
         "text": "Application héritée qui permet à un poste de travail sans disque de découvrir sa propre adresse IP et de trouver un serveur BOOTP sur le réseau.",
-        "is_correct": false
+        "is_correct": true
       },
       {
         "text": "Un ensemble de règles de base pour l’échange de texte, d’images graphiques, de sons, de vidéos et d’autres fichiers multimédias sur le Web.",
@@ -4180,7 +4180,7 @@
       },
       {
         "text": "logiciel installé sur l’appareil de l’utilisateur et collectant des informations sur l’utilisateur",
-        "is_correct": false
+        "is_correct": true
       },
       {
         "text": "l’utilisation d’identifiants volés pour accéder à des données privées",
@@ -4211,7 +4211,7 @@
       },
       {
         "text": "un protocole de tunnel qui fournit aux utilisateurs distants un accès sécurisé au réseau d’une organisation",
-        "is_correct": false
+        "is_correct": true
       },
       {
         "text": "un appareil réseau qui filtre l’accès et le trafic entrant dans un réseau",
@@ -4230,7 +4230,7 @@
     "choices": [
       {
         "text": "IMAP",
-        "is_correct": false
+        "is_correct": true
       },
       {
         "text": "FTP",
@@ -4280,7 +4280,7 @@
     "choices": [
       {
         "text": "DNS",
-        "is_correct": false
+        "is_correct": true
       },
       {
         "text": "NetBIOS (NetBT)",
@@ -4314,7 +4314,7 @@
       },
       {
         "text": "255.255.255.224",
-        "is_correct": false
+        "is_correct": true
       },
       {
         "text": "255.255.255.240",
@@ -4448,7 +4448,7 @@
       },
       {
         "text": "uniquement les hôtes B, C et le routeur R1",
-        "is_correct": false
+        "is_correct": true
       },
       {
         "text": "uniquement les hôtes A, B et C",
@@ -4474,7 +4474,7 @@
       },
       {
         "text": "Zigbee",
-        "is_correct": false
+        "is_correct": true
       },
       {
         "text": "WiMAX",
@@ -4504,7 +4504,7 @@
       },
       {
         "text": "2001:DA48:FC5:A4::/64​",
-        "is_correct": false
+        "is_correct": true
       },
       {
         "text": "2001 : :/64",
